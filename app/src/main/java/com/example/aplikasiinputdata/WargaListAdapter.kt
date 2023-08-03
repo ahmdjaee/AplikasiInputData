@@ -26,20 +26,21 @@ class WargaListAdapter : RecyclerView.Adapter<WargaListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: WargaListAdapter.MyViewHolder, position: Int) {
         val currentItem = wargaList[position]
-        holder.itemView.findViewById<TextView>(R.id.tv_id2).text = currentItem.id.toString()
+        holder.itemView.findViewById<TextView>(R.id.tv_id2).text = (position+1).toString()
         holder.itemView.findViewById<TextView>(R.id.tv_warga2).text = currentItem.namaWarga
         holder.itemView.findViewById<TextView>(R.id.tv_tanggal2).text = getCurrentDate()
         holder.itemView.findViewById<TextView>(R.id.tv_uang2).text = formatMoney(currentItem.UangIuran)
-//        holder.itemView.findViewById<TextView>(R.id.tvWaktu).text
+        holder.itemView.findViewById<TextView>(R.id.tv_ket).text = currentItem.keterangan
 
         holder.itemView.findViewById<ConstraintLayout>(R.id.rowLayout2).setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
         if (position % 2 == 0){
-            holder.itemView.findViewById<ConstraintLayout>(R.id.rowLayout2).setBackgroundColor(Color.LTGRAY)
+            holder.itemView.findViewById<ConstraintLayout>(R.id.rowLayout2).setBackgroundResource(R.color.ungu_transparan)
+
         }else {
-            holder.itemView.findViewById<ConstraintLayout>(R.id.rowLayout2).setBackgroundColor(Color.WHITE)
+            holder.itemView.findViewById<ConstraintLayout>(R.id.rowLayout2).setBackgroundResource(R.color.pink_transparan)
         }
     }
     override fun getItemCount(): Int {

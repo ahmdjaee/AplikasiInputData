@@ -14,4 +14,7 @@ interface UserDao {
     @Delete
     suspend fun deleteWarga(warga: Warga)
 
+    @Update
+    suspend fun updateWarga(warga: Warga)
+
 }

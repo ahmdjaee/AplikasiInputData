@@ -9,9 +9,12 @@
     <TextView
         android:id="@+id/tv_id2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:paddingVertical="4dp"
         android:textAlignment="center"
+        android:textColor="#E3E2E2"
         android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_warga2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +25,11 @@
     <TextView
         android:id="@+id/tv_tanggal2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:paddingVertical="4dp"
+        android:textColor="#E3E2E2"
         android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_uang2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_warga2"
@@ -35,7 +41,10 @@
         android:id="@+id/tv_uang2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:textColor="#E3E2E2"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_tanggal2"
@@ -47,6 +56,8 @@
         android:id="@+id/tv_warga2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:textColor="#E3E2E2"
         android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/tv_tanggal2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -56,12 +67,15 @@
         tools:text="Nama Warga" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTextKeterangan"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:paddingVertical="4dp"
         android:text="Keterangan : "
+        android:textColor="#E3E2E2"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tanggal2"
         app:layout_constraintStart_toEndOf="@+id/tv_id2"
         app:layout_constraintTop_toBottomOf="@+id/tv_warga2" />
 
@@ -69,8 +83,12 @@
         android:id="@+id/tv_ket"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:textColor="#E3E2E2"
+        android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@+id/textView13" />
+        app:layout_constraintStart_toEndOf="@+id/tv_tanggal2"
+        app:layout_constraintTop_toTopOf="@+id/tvTextKeterangan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,24 +42,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etTanggal2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Tanggal Iuran" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -68,7 +50,7 @@
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etUang2"
@@ -82,12 +64,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="update"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
             <Button
                 android:id="@+id/btnDelete"
@@ -99,6 +82,24 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etKeterangan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Keterangan" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

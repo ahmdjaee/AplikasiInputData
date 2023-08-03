@@ -7,5 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ungu_transparan">#A83B53E4</color>
+    <color name="pink_transparan">#A8334DDE</color>
+    <color name="ungu">#334DDE</color>
     <drawable name="layout">@drawable/layout</drawable>
 </resources>

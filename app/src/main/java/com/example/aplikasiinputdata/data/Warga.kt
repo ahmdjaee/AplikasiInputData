@@ -11,7 +11,8 @@ data class Warga(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val namaWarga :String,
-    val tanggalIuran : String,
+    val keterangan : String,
+//    val tanggalIuran : String,
     val UangIuran : Int
 
 ):Parcelable

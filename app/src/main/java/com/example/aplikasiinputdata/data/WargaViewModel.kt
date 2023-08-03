@@ -27,4 +27,10 @@ class WargaViewModel(application: Application):AndroidViewModel(application) {
             repository.deleteWarga(warga)
         }
     }
+
+    fun updateWarga(warga: Warga){
+        viewModelScope.launch {
+            repository.updateWarga(warga)
+        }
+    }
 }

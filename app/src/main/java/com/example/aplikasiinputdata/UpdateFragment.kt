@@ -28,14 +28,15 @@ class UpdateFragment : Fragment() {
         val view = binding.root
 
         binding.etNamaWarga2.setText(args.currentWarga.namaWarga)
-        binding.etTanggal2.setText(args.currentWarga.tanggalIuran)
+//        binding.etTanggal2.setText(args.currentWarga.tanggalIuran)
         binding.etUang2.setText(args.currentWarga.UangIuran.toString())
+        binding.etKeterangan2.setText(args.currentWarga.keterangan)
 
         mWargaViewModel = ViewModelProvider(this).get(WargaViewModel::class.java)
 
         binding.btnUpdate.setOnClickListener {
             val id = args.currentWarga.id
-//            updateDataToDatabase(id)
+            updateDataToDatabase(id)
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
         binding.btnDelete.setOnClickListener {
@@ -49,9 +50,18 @@ class UpdateFragment : Fragment() {
 
     }
     private fun deleteWarga(){
-        val warga = Warga(args.currentWarga.id,args.currentWarga.namaWarga,args.currentWarga.tanggalIuran,args.currentWarga.UangIuran)
+        val warga = Warga(args.currentWarga.id,args.currentWarga.namaWarga,args.currentWarga.keterangan,args.currentWarga.UangIuran)
         mWargaViewModel.deleteWarga(warga)
         findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+    }
+
+    private fun updateDataToDatabase (id : Int){
+        val namaWarga = binding.etNamaWarga2.text.toString()
+        val uangIuran = Integer.parseInt(binding.etUang2.text.toString())
+        val keterangan = binding.etKeterangan2.text.toString()
+        args.currentWarga.id
+        val warga = Warga (id, namaWarga, keterangan, uangIuran)
+        mWargaViewModel.updateWarga(warga)
     }
 
 }

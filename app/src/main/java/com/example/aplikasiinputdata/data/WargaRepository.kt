@@ -13,4 +13,9 @@ class WargaRepository (private val userDao: UserDao){
         userDao.deleteWarga(warga)
     }
 
+    suspend fun updateWarga(warga: Warga){
+        userDao.updateWarga(warga)
+    }
+
+
 }
